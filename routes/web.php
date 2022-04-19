@@ -22,6 +22,9 @@ Route::get('/', function () {
 });
 Route::get('landing', 'Front\FirstController@index')->name('test.index');
 
+Route::get('/redirect/{service}', 'Front\SocialController@redirect');
+Route::get('/callback/{service}', 'Front\SocialController@callback');
+
 /*
 Route::get('/landing', function () {
     return view('landing');
